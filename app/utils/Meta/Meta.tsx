@@ -2,17 +2,18 @@ import type { FC } from "react";
 
 import Head from "next/head";
 
-interface MetaProps {
-	title: string;
-	description?: string;
-}
+import type { MetaProps } from "@/utils/Meta/Meta.type";
 
 const Meta: FC<MetaProps> = ({ description, title }) => {
 	return (
 		<>
 			<Head>
 				<title>{title}</title>
-				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+				<link
+					rel="shortcut icon"
+					href="/public/favicon.ico"
+					type="image/x-icon"
+				/>
 
 				{description ? (
 					<meta
