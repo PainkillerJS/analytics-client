@@ -4,6 +4,8 @@ import Meta from "@/utils/Meta/Meta";
 
 import Header from "@/ui/Layouts/header/Header";
 
+import styles from "./Layout.module.scss";
+
 import type { MetaProps } from "@/utils/Meta/Meta.type";
 
 const Layout: FC<PropsWithChildren<MetaProps>> = ({ children, ...meta }) => {
@@ -12,7 +14,7 @@ const Layout: FC<PropsWithChildren<MetaProps>> = ({ children, ...meta }) => {
 			<Meta {...meta} />
 			<div>
 				<Header />
-				<main>{children}</main>
+				<main className={styles.main}>{children}</main>
 			</div>
 		</>
 	);

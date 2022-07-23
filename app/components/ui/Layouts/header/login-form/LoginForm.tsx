@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 const LoginForm: FC = () => {
-	return <div></div>;
+	return <div>LoginForm</div>;
 };
 
 export default LoginForm;
