@@ -1,7 +1,23 @@
-import type { FC, PropsWithChildren } from "react";
+import { createContext, useContext, useState } from "react";
 
-const AuthContext: FC<PropsWithChildren<unknown>> = ({ children }) => {
-	return <div>{children}</div>;
+import type { FC, PropsWithChildren } from "react";
+import type {
+	AuthContextType,
+	UserStateType
+} from "@context/authContext/auth.interface";
+
+const AuthContext = createContext({} as AuthContextType);
+
+const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
+	const [user, setUser] = useState<UserStateType>(null);
+
+	return (
+		<AuthContext.Provider value={{ user, setUser }}>
+			{children}
+		</AuthContext.Provider>
+	);
 };
 
-export default AuthContext;
+export const useAuth = () => useContext(AuthContext);
+
+export default AuthProvider;
