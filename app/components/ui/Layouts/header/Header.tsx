@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
-import LoginForm from "@/ui/Layouts/header/login-form/LoginForm";
-import Logo from "@/ui/Layouts/header/Logo";
+import LoginForm from "@ui/Layouts/header/login-form/LoginForm";
+import Logo from "@ui/Layouts/header/Logo";
 
 import styles from "./Header.module.scss";
 

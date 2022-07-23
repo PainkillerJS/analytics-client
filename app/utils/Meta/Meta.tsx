@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import Head from "next/head";
 
-import type { MetaProps } from "@/utils/Meta/Meta.type";
+import type { MetaProps } from "@utils/Meta/Meta.type";
 
 const Meta: FC<MetaProps> = ({ description, title }) => {
 	return (
