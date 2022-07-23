@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 const Logo: FC = () => {
-	return <div>Logo</div>;
+	return <div>Analytics</div>;
 };
 
 export default Logo;
